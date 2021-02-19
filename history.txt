@@ -1,0 +1,1000 @@
+ 1042  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg-agent     software-properties-common
+ 1043  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+ 1044  sudo apt-key fingerprint 0EBFCD88
+ 1045  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+ 1046     $(lsb_release -cs) \
+ 1047     stable"
+ 1048  docker run hello-world
+ 1049  sudo docker run hello-world
+ 1050  docker pull nginx
+ 1051  sudo docker pull nginx
+ 1052  docker image ls
+ 1053  sudo docker image ls
+ 1054  docker container run --rm -p 80:80 --name myNginx nginx
+ 1055  sudo docker container run --rm -p 80:80 --name myNginx nginx
+ 1056  cd cat-web/
+ 1057  cd html/
+ 1058  sudo docker container run --rm -p 80:80 --name myNginx -v
+ 1059  sudo docker container run --rm -p 80:80 --name myNginx -v (pwd)/html:/usr/share/nginx/html nginx
+ 1060  sudo docker container run --rm -p 80:80 --name myNginx -v $(pwd)/html:/usr/share/nginx/html nginx
+ 1061  ls
+ 1062  cd html/
+ 1063  ls
+ 1064  cd ..
+ 1065  ls
+ 1066  sudo docker container run --rm -p 80:80 --name myNginx -v $(pwd)/html:/usr/share/nginx/html nginx
+ 1067  sudo docker container run -d --name myMongo mongo
+ 1068  sudo docker container inspect myMongo
+ 1069  sudo docker volume ls
+ 1070  sudo docker container exec -it myMongo mongo
+ 1071  sudo docker volume create my-mongo-volume
+ 1072  sudo docker volume ls
+ 1073  sudo docker container run -d -v my-mongo-volume:/data/db --name myNewMongo mongo
+ 1074  sudo docker inspect myNewMongo
+ 1075  sudo docker network create my-network
+ 1076  sudo docker network ls
+ 1077  sudo docker container run -d --rm --network my-network --name php-server php:apache
+ 1078  sudo docker container run -d --network my-network -e MYSQL_ROOT_PASSWORD=123456 --name mysql-db mysql
+ 1079  sudo docker container exec -it php-server bash
+ 1080  apt-get update && apt-get install iputils-ping
+ 1081  sudo apt-get update && apt-get install iputils-ping
+ 1082  sudo apt-get install iputils-ping
+ 1083  sudo docker container exec -it php-server bash
+ 1084  sudo docker container ls
+ 1085  sudo docker container run --rm -d -p 81:80 --name myNginxBG nginx
+ 1086  sudo docker container ls
+ 1087  sudo docker container logs myNginxBG
+ 1088  sudo docker container exec -it myNginx bash
+ 1089  docker container exec myNginx ls
+ 1090  sudo docker container exec myNginx ls
+ 1091  sudo docker container restart myNginxBG
+ 1092  sudo docker container stop myNginxBG
+ 1093  sudo container ls
+ 1094  sudo docker container ls
+ 1095  sudo docker container start myNginxBG
+ 1096  sudo docker container run -d -p 81:80 --name myNginxBG nginx
+ 1097  docker container start myNginxBG
+ 1098  sudo docker container start myNginxBG
+ 1099  sudo docker container rm -f myNginx
+ 1100  ls
+ 1101  cd cat-web/
+ 1102  cd html/
+ 1103  git status
+ 1104  git branch
+ 1105  git checkout main 
+ 1106  git pull
+ 1107  git checkout feat/content 
+ 1108  ls
+ 1109  python manage.py runserver
+ 1110  ls
+ 1111  source venv/bin/activate
+ 1112  python manage.py runserver
+ 1113  git status
+ 1114  git add .
+ 1115  git commit -m"changed colour scheme to dark blue, partner images resized to 200px, about partners changed and hashed out the slideshow since cant get it to work yet"
+ 1116  git push
+ 1117  git branch
+ 1118  python manage.py runserver
+ 1119  source venv/bin/activate
+ 1120  cd meeting_planner/
+ 1121  python manage.py runserver
+ 1122  ssh root@134.209.72.11
+ 1123  clear
+ 1124  ssh root@46.101.168.247
+ 1125  ssh masai@46.101.168.247
+ 1126  git status
+ 1127  ls
+ 1128  cd mahapa_financial/
+ 1129  git branch
+ 1130  git branch
+ 1131  git status
+ 1132  gitadd .
+ 1133  git add .
+ 1134  git commit -m"added geo-location coordinates to map.js"
+ 1135  git push
+ 1136  git checkout master
+ 1137  git checkout main 
+ 1138  git pull
+ 1139  git checkout feat/content 
+ 1140  git merge main
+ 1141  git checkout main 
+ 1142  git checkout -b feat/email-marketing
+ 1143  git branch
+ 1144  git push
+ 1145  git push -u origin feat/email-marketing
+ 1146  git branch
+ 1147  ls
+ 1148  source venv/bin/activate
+ 1149  python manage.py startapp marketing
+ 1150  python manage.py runserver
+ 1151  pip install mailchimp-marketing
+ 1152  python manage.py runserver
+ 1153  git status
+ 1154  git add .
+ 1155  git commit -m"connected the email subscribe form to mailchimp. still to find a way to add name to the api and deal with already existing emails"
+ 1156  git push
+ 1157  python manage.py runserver
+ 1158  python manage.py makemigrations
+ 1159  python manage.py migrate
+ 1160  python manage.py runserver
+ 1161  git status
+ 1162  git add .
+ 1163  git commit -m"sent form info straight from html footer to the subscribe function. did some client side validation too. still need to deal with existing subscribers."
+ 1164  git push
+ 1165  git branch
+ 1166  git checkout main 
+ 1167  git checkout -b feat/email-service
+ 1168  git branch
+ 1169  pip install django-ses
+ 1170  pip install --upgrade pip
+ 1171  python manage.py shell
+ 1172  git status
+ 1173  git add .
+ 1174  git commit -m"added aws email service credentials"
+ 1175  git push
+ 1176  git push -u origin feat/email-service 
+ 1177  ssh masai@46.101.168.247
+ 1178  git status
+ 1179  ssh masai@http://46.101.168.247/
+ 1180  ssh masai@http://46.101.168.247
+ 1181  ssh masai@46.101.168.247
+ 1182  git pull
+ 1183  git branch
+ 1184  git checkout main 
+ 1185  git pull
+ 1186  git checkout feat/email-marketing 
+ 1187  pip install mailchimp-marketing==3.0.24
+ 1188  pip freeze
+ 1189  ls
+ 1190  source venv/bin/activate
+ 1191  pip freeze
+ 1192  pip freeze > requirements.txt 
+ 1193  git status
+ 1194  git commit -m"added mailchimp to requirements"
+ 1195  git status
+ 1196  git add .
+ 1197  git branch
+ 1198  git commit -m"added mailchimp to requirements"
+ 1199  git push
+ 1200  git branch
+ 1201  git checkout feat/email-service 
+ 1202  git checkout main 
+ 1203  git pull
+ 1204  git checkout feat/email-service 
+ 1205  git merge main 
+ 1206  git branch 
+ 1207  git status
+ 1208  git commit -m"resolved conflict in settings.py"
+ 1209  git add mahapa_financial/
+ 1210  git commit -m"resolved conflict in settings.py"
+ 1211  git push
+ 1212  git branch
+ 1213  git checkout main 
+ 1214  git pull
+ 1215  git checkout feat/email-service 
+ 1216  git merge main 
+ 1217  git branch
+ 1218  python manage.py runserver
+ 1219  git status
+ 1220  git checkout -b feat/SEO
+ 1221  git status
+ 1222  git checkout main 
+ 1223  git branch -d feat/SEO 
+ 1224  git branch -D feat/SEO 
+ 1225  git branch
+ 1226  git checkout -b feat/SEO
+ 1227  git status
+ 1228  python manage.py runserver
+ 1229  git status
+ 1230  git add .
+ 1231  git status
+ 1232  git commit -m"added meta keywords, description and author for each page"
+ 1233  git push
+ 1234  git push -u feat/SEO
+ 1235  git push -u origin feat/SEO
+ 1236  git status
+ 1237  git checkout feat/content 
+ 1238  python manage.py runserver
+ 1239  git status
+ 1240  git add .
+ 1241  git branch
+ 1242  git commit -m"added description of images via the alt attribute for SEO purposes"
+ 1243  git push
+ 1244  ssh masai@46.101.168.247
+ 1245  ls
+ 1246  git branch
+ 1247  source venv/bin/activate
+ 1248  cd meeting_planner/
+ 1249  python manage.py runserver
+ 1250  pip list
+ 1251  curl https://www.pgadmin.org/static/packages_pgadmin_org.pub | sudo apt-key add
+ 1252  sudo sh -c 'echo "deb https://ftp.postgresql.org/pub/pgadmin/pgadmin4/apt/$(lsb_release -cs) pgadmin4 main" > /etc/apt/sources.list.d/pgadmin4.list && apt update'
+ 1253  #
+ 1254  # Install pgAdmin
+ 1255  #
+ 1256  # Install for both desktop and web modes:
+ 1257  sudo apt install pgadmin4
+ 1258  pgadmin4
+ 1259  pgadmin
+ 1260  pgadmin3
+ 1261  python manage.py runserver
+ 1262  pip install psycopg2
+ 1263  python manage.py runserver
+ 1264  git branch
+ 1265  ls
+ 1266  python manage.py migrate
+ 1267  python manage.py makemigrations
+ 1268  python manage.py migrate
+ 1269  git checkout feat/email-m
+ 1270  git checkout feat/email-marketing 
+ 1271  ls
+ 1272  git status
+ 1273  cd ..
+ 1274  ls
+ 1275  python manage.py runserver
+ 1276  ls
+ 1277  source venv/bin/activate
+ 1278  python manage.py runserver
+ 1279  git status
+ 1280  git add .
+ 1281  git commit -m"added functionality to update user info if email already exists and create a new record if first time subscriber."
+ 1282  git push
+ 1283  code
+ 1284  code .
+ 1285  git branch
+ 1286  git status
+ 1287  git branch feat/content 
+ 1288  ls
+ 1289  git branch
+ 1290  git checkout feat/content 
+ 1291  git status
+ 1292  git commit -m"want to see how github actions will react"
+ 1293  git add .
+ 1294  git commit -m"want to see how github actions will react"
+ 1295  git status
+ 1296  git add .
+ 1297  git status
+ 1298  git add -a
+ 1299  git add .
+ 1300  git status
+ 1301  git add ../pages/
+ 1302  git status
+ 1303  git commit -m"want to see how github actions will react"
+ 1304  git push
+ 1305  git status
+ 1306  git add .
+ 1307  git status
+ 1308  git add ../pages/
+ 1309  git status
+ 1310  git commit -m"another commit to try see how github actions reacts"
+ 1311  git push
+ 1312  whois mahapafinancial.co.za
+ 1313  ssh masai@46.101.168.247/
+ 1314  ssh masai@46.101.168.247
+ 1315  ipconfig
+ 1316  git pull
+ 1317  git branch
+ 1318  git checkout main 
+ 1319  git pull
+ 1320  git checkout feat/content 
+ 1321  git pull
+ 1322  git merge main
+ 1323  code .
+ 1324  git merge main
+ 1325  git status
+ 1326  git add pages/views.py 
+ 1327  git status
+ 1328  git commit -m"resolved conflict"
+ 1329  git push\
+ 1330  git push
+ 1331  git branch
+ 1332  git checkout main 
+ 1333  git pull
+ 1334  git checkout feat/content 
+ 1335  git merge main 
+ 1336  git status
+ 1337  git add pages/
+ 1338  git status
+ 1339  git commit -m"fixed conflicts in order to merge"
+ 1340  git push
+ 1341  git branch main 
+ 1342  git checkout main 
+ 1343  git pull
+ 1344  ls
+ 1345  cd Desktop/
+ 1346  cd mahapafinancial/
+ 1347  ks
+ 1348  ls
+ 1349  cd mahapa_financial/
+ 1350  git branch
+ 1351  git status
+ 1352  git add .
+ 1353  git commit -m"added domain to allowed hosts"
+ 1354  git push
+ 1355  ssh@46.101.168.247
+ 1356  ssh masai@46.101.168.247
+ 1357  ssh masai@6.101.168.247
+ 1358  ssh masai@46.101.168.247
+ 1359  masai@snoek.ddns.net
+ 1360  ssh masai@snoek.ddns.net
+ 1361  ssh -N -f -L localhost:8888:localhost:8889
+ 1362  ssh -N -f -L localhost:8888:localhost:8889 masai@snoek.ddns.net
+ 1363  sudo snap install flutter --classic
+ 1364  flutter doctor
+ 1365  which flutter
+ 1366  flutter devices
+ 1367  which flutter
+ 1368  flutter sdk-path
+ 1369  yes | sdkmanager --licenses
+ 1370  flutter devices
+ 1371  ssh masai@46.101.168.247
+ 1372  code .
+ 1373  git branch
+ 1374  git checkout -b feat/google-map
+ 1375  cd ..
+ 1376  ls
+ 1377  cd ../..
+ 1378  ls
+ 1379  source venv/bin/activate
+ 1380  python manage.py runserver
+ 1381  python manage.py runserver 7000
+ 1382  python manage.py runserve
+ 1383  python manage.py runserver
+ 1384  git status
+ 1385  git branch
+ 1386  git add pages/
+ 1387  git status
+ 1388  git add staticfiles/
+ 1389  git commit -m"added google maps api and marker to the contact pag"
+ 1390  git push
+ 1391  git push -u origin feat/google-map 
+ 1392  jupyter notebook
+ 1393  /usr/bin/python3 /home/masai/.vscode/extensions/ms-python.python-2020.12.424452561/pythonFiles/pyvsc-run-isolated.py pip install -U pylint --user
+ 1394  code .
+ 1395  git branch -b feat/twitter-feed
+ 1396  git branch
+ 1397  git checkout main 
+ 1398  git checkout -b feat/twitter-feed 
+ 1399  ls
+ 1400  source venv/bin/activate
+ 1401  python manage.py runserver
+ 1402  git status
+ 1403  git add .
+ 1404  git commit -m"added a twitter feed to the footer"
+ 1405  git push
+ 1406  git push -u origin feat/twitter-feed 
+ 1407  git status
+ 1408  git branch
+ 1409  git checkout feat/google-map 
+ 1410  python manage.py runserver
+ 1411  git status
+ 1412  git commit -m"added google map api keys to settings file so the view sends it to the html in context"
+ 1413  git add .
+ 1414  git commit -m"added google map api keys to settings file so the view sends it to the html in context"
+ 1415  git push
+ 1416  git branch
+ 1417  git checkout main 
+ 1418  git pull
+ 1419  python manage.py runserver
+ 1420  code .
+ 1421  python manage.py runserver
+ 1422  git stat
+ 1423  python manage.py runserver
+ 1424  git status
+ 1425  git commit -m"added api key to the url directly instead of getting it from settings"
+ 1426  git add pages/
+ 1427  git status
+ 1428  git commit -m"added api key to the url directly instead of getting it from settings"
+ 1429  git push
+ 1430  ls
+ 1431  cd flutter_app/
+ 1432  ls
+ 1433  cd ..
+ 1434  ls
+ 1435  cd Desktop/
+ 1436  cd mahapafinancial/
+ 1437  ls
+ 1438  cd mahapa_financial/
+ 1439  ls
+ 1440  source venv/bin/activate
+ 1441  git branch
+ 1442  git checkout -b feat/whatsapp
+ 1443  git status
+ 1444  git branch
+ 1445  ls
+ 1446  python manage.py runserver
+ 1447  git status
+ 1448  git add .
+ 1449  git commit -m"added the whatsapp button fixed at the bottom right of the screen, which sends a user to chat on whatsapp"
+ 1450  git push 
+ 1451  git push -u origin feat/whatsapp 
+ 1452  code .
+ 1453  /home/masai/AndroidStudioProjects/expense_manager/lib/widgets/user_transactions.dart
+ 1454  ls
+ 1455  flutter pub get
+ 1456  flutter devices
+ 1457  code .
+ 1458  flutter devices
+ 1459  flutter doctor
+ 1460  ls
+ 1461  flutter create meals_app
+ 1462  flutter devices
+ 1463  code .
+ 1464  flutter upgrade
+ 1465  source venv/bin/activate
+ 1466  ls
+ 1467  cd first_site/
+ 1468  ls
+ 1469  python app.py 
+ 1470  pub get
+ 1471  flutter pub get
+ 1472  flutter create shop_app
+ 1473  ls
+ 1474  cd shop_app/
+ 1475  ls
+ 1476  flutter pub get
+ 1477  sudo apt-get update
+ 1478  flutter pub get
+ 1479  code .
+ 1480  flutter pub get
+ 1481  code .
+ 1482  python -m venv venv
+ 1483  source venv/bin/activate
+ 1484  python game_engine.py 
+ 1485  clear
+ 1486  python game_engine.py 
+ 1487  nano requirements.txt
+ 1488  pip freeze > requirements.txt
+ 1489  pip freeze >> requirements.txt
+ 1490  pip list >> requirements.txt
+ 1491  pip freeze
+ 1492  pip install requirements.txt 
+ 1493  pip install -r requirements.txt 
+ 1494  pip freeze
+ 1495  clear
+ 1496  pip install pytest
+ 1497  clear
+ 1498  ls
+ 1499  pytest
+ 1500  clear
+ 1501  pytest
+ 1502  clear
+ 1503  pytest
+ 1504  pip list
+ 1505  pip list > requirements.txt 
+ 1506  pip freeze
+ 1507  pip freeze > requirements.txt 
+ 1508  clear
+ 1509  git status
+ 1510  .gitignore
+ 1511  nano .gitignore
+ 1512  git status
+ 1513  git add .
+ 1514  git commit -m"created a game engine to add, subtract and get scores of users. also tested the functions"
+ 1515  git status
+ 1516  git branch
+ 1517  git status
+ 1518  git add .
+ 1519  git status
+ 1520  ls
+ 1521  git clone https://github.com/Umuzi-org/Masai-Mahapa-606-tilde-project-tutorial-how-repo-projects-work-.git
+ 1522  clear
+ 1523  git clone https://github.com/Umuzi-org/Masai-Mahapa-606-tilde-project-tutorial-how-repo-projects-work-.git
+ 1524  git status
+ 1525  ls
+ 1526  cd Masai-Mahapa-606-tilde-project-tutorial-how-repo-projects-work-/
+ 1527  git status
+ 1528  git branch
+ 1529  git stash
+ 1530  git status
+ 1531  git checkout -b readme
+ 1532  git branch
+ 1533  git commit -m"made changes to the readme file"
+ 1534  git add .
+ 1535  git commit -m"made changes to the readme file"
+ 1536  git push
+ 1537  git push -u origin readme
+ 1538  git status
+ 1539  git checkout main 
+ 1540  git branch
+ 1541  git branch -d readme
+ 1542  git branch
+ 1543  git push origin --delete readme
+ 1544  git branch
+ 1545  git checkout -b markdown
+ 1546  nano testing.md
+ 1547  ls
+ 1548  git status
+ 1549  git add .
+ 1550  git commit -m"created markdown file"
+ 1551  git push
+ 1552  git push -u origin markdown
+ 1553  clear
+ 1554  ls
+ 1555  cd ..
+ 1556  ls
+ 1557  cd level\ 1\ katas/
+ 1558  git pull https://github.com/Umuzi-org/Masai-Mahapa-645-level-1-coding-challenges-alt-python.git
+ 1559  git clone https://github.com/Umuzi-org/Masai-Mahapa-645-level-1-coding-challenges-alt-python.git
+ 1560  ls
+ 1561  cd ..
+ 1562  code .
+ 1563  git branch
+ 1564  ls
+ 1565  cd level\ 1\ katas/
+ 1566  ls
+ 1567  cd Masai-Mahapa-645-level-1-coding-challenges-alt-python/
+ 1568  ls
+ 1569  git branch
+ 1570  git checkout -b task/1
+ 1571  git status
+ 1572  git add .
+ 1573  git commit -m"completed task 1, of returning the second smallest and biggest numbers"
+ 1574  git push
+ 1575  git bra
+ 1576  git push - origin task/1 
+ 1577  git push -u origin task/1 
+ 1578  git branch
+ 1579  git checkout main 
+ 1580  git pull
+ 1581  git checkout -b task/2
+ 1582  git branch
+ 1583  git status
+ 1584  git add .
+ 1585  git commit -m"made the first letter capitalised"
+ 1586  git push
+ 1587  git push -u origin task/2
+ 1588  clear
+ 1589  git branch
+ 1590  git checkout main 
+ 1591  git checkout -b task/3
+ 1592  git status
+ 1593  git add .
+ 1594  git commit -m"checking if the number of o's and x's are equal"
+ 1595  git push -u origin task/3
+ 1596  clear
+ 1597  git branch
+ 1598  git checkout main 
+ 1599  git checkout -b task/4
+ 1600  clear
+ 1601  git status
+ 1602  git add .
+ 1603  git branch
+ 1604  git commit -m"difference between two times complete"
+ 1605  git push
+ 1606  git push -u origin task/4
+ 1607  git branch main 
+ 1608  git checkout main 
+ 1609  git pull
+ 1610  git git branch
+ 1611  ls
+ 1612  git branch
+ 1613  clear
+ 1614  git checkout -b bonus
+ 1615  git branch
+ 1616  git status
+ 1617  git add .
+ 1618  git commit -m"completed the function which returns the sum"
+ 1619  git push -u origin bonus 
+ 1620  clear
+ 1621  ls
+ 1622  cd ..
+ 1623  cd gamification-engine/
+ 1624  git clone https://github.com/Umuzi-org/Masai-Mahapa-643-gamification-engine-python-pytest.git
+ 1625  ls
+ 1626  git clone https://github.com/Umuzi-org/Masai-Mahapa-643-gamification-engine-python-pytest.git
+ 1627  git status
+ 1628  ls -a
+ 1629  clear
+ 1630  ls
+ 1631  git status
+ 1632  git stash
+ 1633  git checkout -b game
+ 1634  git branch
+ 1635  ls
+ 1636  ls -a
+ 1637  nano .gitignore
+ 1638  ls
+ 1639  git status
+ 1640  git branch
+ 1641  git add .
+ 1642  git commit -m"created a class to keep track of user points"
+ 1643  git push -u origin game 
+ 1644  git clone https://github.com/mmistakes/minimal-mistakes.git
+ 1645  code .
+ 1646  git status
+ 1647  git add .
+ 1648  git commit -m"added new post. 30 days of Flutter"
+ 1649  git push
+ 1650  git status
+ 1651  git add .
+ 1652  git commit -m"added navigation of mobildev"
+ 1653  git push
+ 1654  git add .
+ 1655  git commit -m"commented out group names for loop on mobile dev page"
+ 1656  git push
+ 1657  git add .
+ 1658  git commit -m"made layout to be tag"
+ 1659  git push
+ 1660  git status
+ 1661  git add .
+ 1662  git commit -m"group by categories"
+ 1663  git push
+ 1664  git add .
+ 1665  git commit -m"fixed mobile dev category link"
+ 1666  git push
+ 1667  git add .
+ 1668  git commit -m"links to 30days of flutter challange"
+ 1669  git push
+ 1670  clear
+ 1671  vi lesiba.txt
+ 1672  ls
+ 1673  cd ..
+ 1674  ls
+ 1675  cd ..
+ 1676  ls
+ 1677  clear
+ 1678  ssh masai@46.101.168.247
+ 1679  flutter create great_places
+ 1680  code .
+ 1681  cd great_places/
+ 1682  code .
+ 1683  ls
+ 1684  flutter pub get
+ 1685  ssh masai@46.101.168.247
+ 1686  flutter pub get
+ 1687  flutter devices
+ 1688  git branch
+ 1689  git checkout -b more_text
+ 1690  git branch
+ 1691  git checkout main 
+ 1692  git branch
+ 1693  git branch -d more_text 
+ 1694  git branch
+ 1695  git branch -D more_text 
+ 1696  git branch
+ 1697  git checkout -b more_text
+ 1698  git branch
+ 1699  git checkout main 
+ 1700  git pull
+ 1701  git branch
+ 1702  git branch -D more_text 
+ 1703  clear
+ 1704  git checkout -b more_text
+ 1705  git status
+ 1706  git branch
+ 1707  git add .
+ 1708  git commit -m"added more text to the testing.md file"
+ 1709  git push
+ 1710  git push -u origin more_text 
+ 1711  ls
+ 1712  python check.py 
+ 1713  python check.py 60
+ 1714  python check.py 61
+ 1715  python check.py 
+ 1716  code .
+ 1717  ls
+ 1718  cd M
+ 1719  cd Masai-Mahapa-645-level-1-coding-challenges-alt-python/
+ 1720  ls
+ 1721  git pull
+ 1722  git branch
+ 1723  git checkout main 
+ 1724  git pull
+ 1725  ls
+ 1726  git branch
+ 1727  git checkout task/1
+ 1728  git pull
+ 1729  git status
+ 1730  git add .
+ 1731  git commit -m"made changes to handle case where there are only 2 numbers and moved function inputs"
+ 1732  git push
+ 1733  git branch
+ 1734  git checkout task/4
+ 1735  git status
+ 1736  git add .
+ 1737  git commit -m"used only one way to calcuate total seconds to make code cleaner"
+ 1738  git push
+ 1739  git checkout task/3
+ 1740  git branch
+ 1741  clear
+ 1742  git branch
+ 1743  git status
+ 1744  git add .
+ 1745  git commit -m"cleaned up code and not so useful comments"
+ 1746  git push
+ 1747  git branch
+ 1748  git checkout bonus 
+ 1749  git status
+ 1750  clear
+ 1751  git branch
+ 1752  git add .
+ 1753  git commit -m"switched to using regular expressions instead to find both positive and negative numbers"
+ 1754  git push
+ 1755  python
+ 1756  python check.py 61
+ 1757  python check.py 
+ 1758  code .
+ 1759  git clone https://github.com/Umuzi-org/Masai-Mahapa-429-bootcamp-writing-assignment-markdown.git
+ 1760  ls
+ 1761  cd Masai-Mahapa-429-bootcamp-writing-assignment-markdown/
+ 1762  git add .
+ 1763  git commit -m"created empty files"
+ 1764  git push
+ 1765  git branch
+ 1766  git push
+ 1767  git status
+ 1768  git stash
+ 1769  clear
+ 1770  git clone https://github.com/Umuzi-org/Masai-Mahapa-429-bootcamp-writing-assignment-markdown.git
+ 1771  ls
+ 1772  cd Masai-Mahapa-429-bootcamp-writing-assignment-markdown/
+ 1773  git status
+ 1774  git branch
+ 1775  git clone https://github.com/Umuzi-org/Masai-Mahapa-429-bootcamp-writing-assignment-markdown.git
+ 1776  git status
+ 1777  git add .
+ 1778  git commit -m"added new empty files"
+ 1779  git push
+ 1780  git branch
+ 1781  git clone https://github.com/Umuzi-org/Masai-Mahapa-429-bootcamp-writing-assignment-markdown.git
+ 1782  ls
+ 1783  git status
+ 1784  git add .
+ 1785  git commit -m"added rows"
+ 1786  git push
+ 1787  git branch
+ 1788  git checkout main
+ 1789  git checkout -b queries
+ 1790  git branch
+ 1791  git status
+ 1792  git add .
+ 1793  git commit -m"added queries to the database"
+ 1794  git push
+ 1795  git push origin queries 
+ 1796  git branch
+ 1797  git checkout -b writing
+ 1798  git status
+ 1799  git branch
+ 1800  git add .
+ 1801  git commit -m"added empty markdown files"
+ 1802  git push
+ 1803  git push -u origin writing 
+ 1804  git clone https://github.com/Umuzi-org/Masai-Mahapa-641-sql-library-excercise-postgres.git
+ 1805  ls
+ 1806  cd Masai-Mahapa-641-sql-library-excercise-postgres/
+ 1807  git checkout -b tables
+ 1808  git branch
+ 1809  clear
+ 1810  cd ..
+ 1811  ls
+ 1812  cd ..
+ 1813  clear
+ 1814  .code
+ 1815  code ,
+ 1816  code .
+ 1817  LS
+ 1818  ls
+ 1819  cd SQL/
+ 1820  ls
+ 1821  cd Masai-Mahapa-641-sql-library-excercise-postgres/
+ 1822  ls
+ 1823  git branch
+ 1824  ls
+ 1825  git status
+ 1826  git add .
+ 1827  git commit -m"created the tables required"
+ 1828  git push
+ 1829  git push -u origin tables
+ 1830  code .
+ 1831  pip install black
+ 1832  ls
+ 1833  cd Masai-Mahapa-645-level-1-coding-challenges-alt-python/
+ 1834  ls
+ 1835  black task_3.py 
+ 1836  black task_4.py 
+ 1837  code .
+ 1838  git branch
+ 1839  git checkout task/1
+ 1840  git status
+ 1841  git add .
+ 1842  git commit -m"solved for a case of 2 unique numbers in a long list and allowing for easier imports of the function"
+ 1843  git push
+ 1844  git status
+ 1845  git checkout main 
+ 1846  git pull
+ 1847  git checkout task/3
+ 1848  git status
+ 1849  git add .
+ 1850  git commit -m"formatted the code in a cleaner way"
+ 1851  git push
+ 1852  git branch
+ 1853  git checkout task/4
+ 1854  git status
+ 1855  git add .
+ 1856  git commit -m"changed the value returned from a float to an int and reformatted the code to be cleaner"
+ 1857  git push
+ 1858  flutter create chat_app
+ 1859  ls
+ 1860  cd chat_app/
+ 1861  code .
+ 1862  ls
+ 1863  flutter pub get
+ 1864  code .
+ 1865  cd
+ 1866  jupyter notebook
+ 1867  pytest tests/test_game_engine.py 
+ 1868  flutter create mova
+ 1869  code .
+ 1870  code .
+ 1871  git branch
+ 1872  git checkout bonus 
+ 1873  code .
+ 1874  ls
+ 1875  black bonus.py 
+ 1876  git add .
+ 1877  git commit -m"used a boolean of state to help in the case that all row sums are below 0"
+ 1878  git push
+ 1879  git status
+ 1880  ls
+ 1881  source venv/bin/activate
+ 1882  ls
+ 1883  ckear
+ 1884  clear
+ 1885  ls
+ 1886  pytest
+ 1887  clear
+ 1888  pytest
+ 1889  clear
+ 1890  ls
+ 1891  cd tests/
+ 1892  pytest test_game_engine.py 
+ 1893  cd ..
+ 1894  ls
+ 1895  clear
+ 1896  python setup.py develop
+ 1897  ls
+ 1898  pytest
+ 1899  ls
+ 1900  python game/game_engine.py 
+ 1901  pytest
+ 1902  clear
+ 1903  git add .
+ 1904  git commit -m"used pyest conventions for conducting automated test. made the Game engine more general to allow any amount of users"
+ 1905  git statis
+ 1906  git branch
+ 1907  git push
+ 1908  ls
+ 1909  black game/game_engine.py 
+ 1910  black tests/test_game_engine.py 
+ 1911  git status
+ 1912  git add .
+ 1913  git commit -m"formatted code propper"
+ 1914  git push
+ 1915  python check.py 
+ 1916  git status
+ 1917  git add .
+ 1918  git commit -m"separated the creation of tables and populating into different files"
+ 1919  git push
+ 1920  clear
+ 1921  git branch
+ 1922  git checkout queries 
+ 1923  clear
+ 1924  git status
+ 1925  git add .
+ 1926  git commit -m"added semicolons at the end of statements and separated long query into multiple lines"
+ 1927  git push
+ 1928  git branch
+ 1929  git push -u origin queries 
+ 1930  code .
+ 1931  git branch
+ 1932  git checkout tables 
+ 1933  code .
+ 1934  git status
+ 1935  git add .
+ 1936  git commit -m"history"
+ 1937  git push
+ 1938  git branch
+ 1939  git push
+ 1940  git status
+ 1941  git add .
+ 1942  git commit -m"why this career"
+ 1943  git add .
+ 1944  git commit -m"free time"
+ 1945  clear
+ 1946  git status
+ 1947  git add .
+ 1948  git commit -m"experience"
+ 1949  git push
+ 1950  git add .
+ 1951  git commit -m"added all answers"
+ 1952  git push
+ 1953  code .
+ 1954  git status
+ 1955  cd Masai-Mahapa-643-gamification-engine-python-pytest/
+ 1956  git status 
+ 1957  git branch
+ 1958  ls -a
+ 1959  nano .gitignore 
+ 1960  ls
+ 1961  nano .gitignore 
+ 1962  git status
+ 1963  git add .
+ 1964  git status
+ 1965  git add .
+ 1966  git commit -m"ignored game.eff-info and removed duplicate assignment of some metrics in tests"
+ 1967  git status
+ 1968  git push
+ 1969  flutter channel beta
+ 1970  flutter upgrade
+ 1971  flutter config --enable-web
+ 1972  flutter devices
+ 1973  flutter create mova_web
+ 1974  ls
+ 1975  cd mova_web/
+ 1976  ls
+ 1977  code .
+ 1978  flutter run -d chrome
+ 1979  flutter build web
+ 1980  python -m http.server 8000
+ 1981  ls
+ 1982  cd web/
+ 1983  python -m http.server 8000
+ 1984  cd ..
+ 1985  python -m http.server 8000
+ 1986  ls
+ 1987  cd web/
+ 1988  python hello.py 
+ 1989  cd ..
+ 1990  ls
+ 1991  cd build/
+ 1992  ls
+ 1993  cd web/
+ 1994  clear
+ 1995  python hello.py 
+ 1996  pwd
+ 1997  python hello.py 
+ 1998  git init
+ 1999  ls -a
+ 2000  clear
+ 2001  git status
+ 2002  touch README.md
+ 2003  ls
+ 2004  git add README.md 
+ 2005  git status 
+ 2006  git commit -m"initial commit"
+ 2007  git log
+ 2008  nano README.md 
+ 2009  cat README.md 
+ 2010  git commit -m"second commit"
+ 2011  git add .
+ 2012  git commit -m"second commit"
+ 2013  nano README.md 
+ 2014  git add .
+ 2015  git commit -m"third commit"
+ 2016  git log
+ 2017  git checkout e1dd54d1d005c0afdda8985609f0ce3f6862e1da
+ 2018  cat README.md 
+ 2019  git checkout master 
+ 2020  git branch
+ 2021  cat README.md 
+ 2022  git checkout -b milkshake-flavours
+ 2023  git branch 
+ 2024  nano milkshakes.md
+ 2025  git add .
+ 2026  git commit -m"added initial flavours"
+ 2027  git log
+ 2028  clear
+ 2029  git branch
+ 2030  git log
+ 2031  git checkout master 
+ 2032  git log
+ 2033  git checkout master 
+ 2034  history > history.txt
+ 2035  git branch
+ 2036  git stash
+ 2037  git status
+ 2038  git reset
+ 2039  git status
+ 2040  git checkout milkshake-flavours 
+ 2041  history > history.txt
